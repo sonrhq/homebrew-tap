@@ -9,17 +9,17 @@ class Hway < Formula
   license "OpenGLV3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-darwin-arm64.tar.gz"
-      sha256 "b75433da18e7044c44aaf47b19263c1e70c01ba740be2231a9a8799b53c7ccc3"
+    if Hardware::CPU.intel?
+      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-darwin-amd64.tar.gz"
+      sha256 "459b2c5297b4c3df1e406f7042f275db1ab18157092e52ab8a35ed7e0e8bced2"
 
       def install
         bin.install "hway"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-darwin-amd64.tar.gz"
-      sha256 "838903a7967ca69f75e3e2dde8895ab2e2f62a273485abe15492c4dc7392d9c6"
+    if Hardware::CPU.arm?
+      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-darwin-arm64.tar.gz"
+      sha256 "6f4335b40b7d425d4de23e44cf1c5a8d3e5aaaeb350a12291478a3d804028f80"
 
       def install
         bin.install "hway"
@@ -28,17 +28,17 @@ class Hway < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-arm64.tar.gz"
-      sha256 "d1bd972f5a6d5ce47df115fd1f2323d24f754f54591c32084351c1a37aa7a4e1"
+    if Hardware::CPU.intel?
+      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-amd64.tar.gz"
+      sha256 "bce341d36283b94e5ec0da2dd7c403dcbe05a0d6c55cb3cbe951f063d963e2c2"
 
       def install
         bin.install "hway"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-amd64.tar.gz"
-      sha256 "c6428d9fb0040d3bd41cc11d30d43cec101f6b36cf26a16f8389c58cf3b84774"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-arm64.tar.gz"
+      sha256 "4ac3eef8227b87a9eb5a078fc9f338214838bb425c9110ff59a8573b60d735a2"
 
       def install
         bin.install "hway"
