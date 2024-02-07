@@ -11,7 +11,7 @@ class Hway < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-darwin-amd64.tar.gz"
-      sha256 "459b2c5297b4c3df1e406f7042f275db1ab18157092e52ab8a35ed7e0e8bced2"
+      sha256 "781f074412b9f7e3c4eba9cb7b01c8007716f5b3bca369a6bc8f6c4cdebf5f11"
 
       def install
         bin.install "hway"
@@ -19,7 +19,7 @@ class Hway < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-darwin-arm64.tar.gz"
-      sha256 "6f4335b40b7d425d4de23e44cf1c5a8d3e5aaaeb350a12291478a3d804028f80"
+      sha256 "fe4d62e123a2f85855b534808c699cbe17d697cd79600663551efc58959c0bc2"
 
       def install
         bin.install "hway"
@@ -28,17 +28,17 @@ class Hway < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-amd64.tar.gz"
-      sha256 "bce341d36283b94e5ec0da2dd7c403dcbe05a0d6c55cb3cbe951f063d963e2c2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-arm64.tar.gz"
+      sha256 "0ed2d114741781487fef17a4029f395f1828bb4fc2e2965f93bb1dd590c2e121"
 
       def install
         bin.install "hway"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-arm64.tar.gz"
-      sha256 "4ac3eef8227b87a9eb5a078fc9f338214838bb425c9110ff59a8573b60d735a2"
+    if Hardware::CPU.intel?
+      url "https://github.com/sonrhq/sonr/releases/download/v0.13.7/hway-linux-amd64.tar.gz"
+      sha256 "063d186bed2cac372a0add01a3debbd8ea84a0d76e70f2da8c3f801e19caa441"
 
       def install
         bin.install "hway"
