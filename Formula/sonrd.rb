@@ -5,21 +5,21 @@
 class Sonrd < Formula
   desc "Sonr Binary Node"
   homepage "https://sonrhq.com"
-  version "0.14.0"
+  version "0.14.1"
   license "OpenGLV3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.14.0/sonrd-darwin-arm64.tar.gz"
-      sha256 "b73d3630bd1f2c3d03d10de1b317fa3a067966fc632abcab4b2d0e25a22542d2"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.14.1/sonrd-darwin-arm64.tar.gz"
+      sha256 "f926003cd7eddb0646ac7dd6aa577faf9cd2b29469b86a89f2a83decabdef88f"
 
       def install
         bin.install "sonrd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.14.0/sonrd-darwin-amd64.tar.gz"
-      sha256 "ffa74bac49469bf3ec83f065e2cc72061cfd9102cbbf544c53e1d77cbf4b9fef"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.14.1/sonrd-darwin-amd64.tar.gz"
+      sha256 "8b4f001111e4707c74bbec973e09ccc4a1730b825d727bbd7877f7380d72b696"
 
       def install
         bin.install "sonrd"
@@ -29,8 +29,8 @@ class Sonrd < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.14.0/sonrd-linux-amd64.tar.gz"
-      sha256 "ab8a8e27c0ab37d8dbfcbba13048ae5aca9bf4311e94b1f7f1d6d1ea0a2e0da4"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.14.1/sonrd-linux-amd64.tar.gz"
+      sha256 "f4f4b2db5242b18f718a57928907a09e112f307151016d2473c8cf7d023ece62"
 
       def install
         bin.install "sonrd"
