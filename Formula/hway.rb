@@ -5,21 +5,21 @@
 class Hway < Formula
   desc "Highway is a Decentralized Gateway which serves the Sonr Dynamic UI and a gateway to the blockchain API."
   homepage "https://sonr.io"
-  version "0.14.4"
+  version "0.15.0"
   license "OpenGLV3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.14.4/hway-darwin-arm64.tar.gz"
-      sha256 "ac1bd8ff5e492e19de16ad0c6e8aabf0dfc6b92dac0b08f457ab0b97f2235ca5"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/hway-darwin-arm64.tar.gz"
+      sha256 "143d633ea88bb5c5fbe39397b27baa5b10fe91ef28700f02f37fa21e5dca0f39"
 
       def install
         bin.install "hway"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.14.4/hway-darwin-amd64.tar.gz"
-      sha256 "ade9c9f7b0f8abee1be7e2c606cc6dd0ca85b672ccf9fdfc9108145317e58379"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/hway-darwin-amd64.tar.gz"
+      sha256 "2b57f8ac674d91beafbe6a4a17fba59518b9413f6b14b0b8f358727a8bf17bf1"
 
       def install
         bin.install "hway"
@@ -29,16 +29,16 @@ class Hway < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.14.4/hway-linux-arm64.tar.gz"
-      sha256 "1f3574d48a828f5e07879d74c850435c48ae3da2a66a2d4d40c60f928b544c47"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/hway-linux-arm64.tar.gz"
+      sha256 "47b7c7743c6b4d5d3d719528b0516c13254c4d4df9816be0158384c10957175a"
 
       def install
         bin.install "hway"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.14.4/hway-linux-amd64.tar.gz"
-      sha256 "afdb8b8895453f0ac7144c24265462d79342e0050748360aca9bb93904f147a0"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/hway-linux-amd64.tar.gz"
+      sha256 "82a8de08f356e89c81ef122a8366756c12bee59f7712df9de68eec105e78d3f6"
 
       def install
         bin.install "hway"
