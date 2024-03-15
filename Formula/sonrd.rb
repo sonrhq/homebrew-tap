@@ -5,21 +5,21 @@
 class Sonrd < Formula
   desc "Sonr is an ibc-enabled blockchain for decentralized identity."
   homepage "https://sonr.io"
-  version "0.15.0"
+  version "0.1.0"
   license "OpenGLV3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/sonrd-darwin-arm64.tar.gz"
-      sha256 "0cf76200c67047bdca7c613436e7023e9d778fd042efc7e9b7666eb0a85ad4a9"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-darwin-arm64.tar.gz"
+      sha256 "639e71df60850cb9ce2a2a62155ae3d3f745320d15a75e58e21e6a01630bb09d"
 
       def install
         bin.install "sonrd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/sonrd-darwin-amd64.tar.gz"
-      sha256 "96a72ca00df24e03cb3dc11c812982dda82e2951775c18737cc7ec85f05c05a7"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-darwin-amd64.tar.gz"
+      sha256 "38edaf258cd1b72630bddd74192399e63beb763c2be6c5296cd0e4d614494544"
 
       def install
         bin.install "sonrd"
@@ -29,16 +29,16 @@ class Sonrd < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/sonrd-linux-arm64.tar.gz"
-      sha256 "253f3856c5c6b1087abcc242bcbd4e0bcb3475427fc49a018f871082eccf34e5"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-linux-arm64.tar.gz"
+      sha256 "18af31b18ae47cc70edd7d230287390d014264b180447d39fd614b9b48a2787b"
 
       def install
         bin.install "sonrd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.15.0/sonrd-linux-amd64.tar.gz"
-      sha256 "19fb794d1f516db119e647ba28b9d97d31181d1bc2f8cea68063d6350252fdb3"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-linux-amd64.tar.gz"
+      sha256 "6563a8f31512c99c51787e849f6f7c2ba364bc4974815a9e4389a8fc8a37e909"
 
       def install
         bin.install "sonrd"
