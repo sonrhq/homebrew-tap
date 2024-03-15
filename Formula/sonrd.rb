@@ -5,21 +5,21 @@
 class Sonrd < Formula
   desc "Sonr is an ibc-enabled blockchain for decentralized identity."
   homepage "https://sonr.io"
-  version "0.1.0"
+  version "0.1.1"
   license "OpenGLV3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-darwin-arm64.tar.gz"
-      sha256 "639e71df60850cb9ce2a2a62155ae3d3f745320d15a75e58e21e6a01630bb09d"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.1/sonrd-darwin-arm64.tar.gz"
+      sha256 "61661481435813f8190dcb1aef50aa601436f87a0b3ac02d3c27541f748cea01"
 
       def install
         bin.install "sonrd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-darwin-amd64.tar.gz"
-      sha256 "38edaf258cd1b72630bddd74192399e63beb763c2be6c5296cd0e4d614494544"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.1/sonrd-darwin-amd64.tar.gz"
+      sha256 "67cc537abeaa6b222f4d2af733dae07a5841655c19b618c81304dcb5e2dcd4e7"
 
       def install
         bin.install "sonrd"
@@ -29,16 +29,16 @@ class Sonrd < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-linux-arm64.tar.gz"
-      sha256 "18af31b18ae47cc70edd7d230287390d014264b180447d39fd614b9b48a2787b"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.1/sonrd-linux-arm64.tar.gz"
+      sha256 "06caaef5e7c8c0f1541beefa7288af3c195147590e3737c9e471f260a225e656"
 
       def install
         bin.install "sonrd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonrhq/sonr/releases/download/v0.1.0/sonrd-linux-amd64.tar.gz"
-      sha256 "6563a8f31512c99c51787e849f6f7c2ba364bc4974815a9e4389a8fc8a37e909"
+      url "https://github.com/sonrhq/sonr/releases/download/v0.1.1/sonrd-linux-amd64.tar.gz"
+      sha256 "ac8bf148ee37cd6cb217a4c412d8c8b7e355a4ad2eedb9bc59f780e5e65e3672"
 
       def install
         bin.install "sonrd"
